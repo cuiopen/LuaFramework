@@ -75,6 +75,7 @@ function PromptCtrl.OnClick(go)
 	if TestProtoType == ProtocalType.SPROTO then
 		this.TestSendSproto();
 	end
+    sceneMgr:ChangeScene("LoginScene")
 	logWarn("OnClick---->>>"..go.name);
 end
 
