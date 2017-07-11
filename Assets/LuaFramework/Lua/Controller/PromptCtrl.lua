@@ -63,20 +63,20 @@ end
 
 --单击事件--
 function PromptCtrl.OnClick(go)
-	if TestProtoType == ProtocalType.BINARY then
-		this.TestSendBinary();
-	end
-	if TestProtoType == ProtocalType.PB_LUA then
-		this.TestSendPblua();
-	end
-	if TestProtoType == ProtocalType.PBC then
-		this.TestSendPbc();
-	end
-	if TestProtoType == ProtocalType.SPROTO then
-		this.TestSendSproto();
-	end
-    sceneMgr:ChangeScene("LoginScene")
-	logWarn("OnClick---->>>"..go.name);
+	-- if TestProtoType == ProtocalType.BINARY then
+	-- 	this.TestSendBinary();
+	-- end
+	-- if TestProtoType == ProtocalType.PB_LUA then
+	-- 	this.TestSendPblua();
+	-- end
+	-- if TestProtoType == ProtocalType.PBC then
+	-- 	this.TestSendPbc();
+	-- end
+	-- if TestProtoType == ProtocalType.SPROTO then
+	-- 	this.TestSendSproto();
+	-- end
+    sceneMgr:ChangeScene("MainScene")
+	logWarn("ChangeScene---->>>MainScene");
 end
 
 --测试发送SPROTO--
