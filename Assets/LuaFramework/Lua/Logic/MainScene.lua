@@ -32,13 +32,8 @@ end
 
 --初始化完成，发送链接服务器信息--
 function LoginScene.OnInitOK()
-    AppConst.SocketPort = 2012;
-    AppConst.SocketAddress = "127.0.0.1";
-    networkMgr:SendConnect();
-
     --注册LuaView--
     this.InitViewPanels();
-
     CtrlManager.Init();
     local ctrl = CtrlManager.GetCtrl(CtrlNames.Prompt);
     if ctrl ~= nil and AppConst.ExampleMode == 1 then
@@ -46,9 +41,4 @@ function LoginScene.OnInitOK()
     end
        
     logWarn('LuaFramework InitOK--->>>');
-end
-
---销毁--
-function LoginScene.OnDestroy()
-	--logWarn('OnDestroy--->>>');
 end
