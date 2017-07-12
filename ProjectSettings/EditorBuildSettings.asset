@@ -6,4 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/LuaFramework/Scenes/main.unity
+    path: Assets/LuaFramework/Scenes/LoginScene.unity
+    guid: d7e241bed38924fcd9402a5803cc3956
+  - enabled: 1
+    path: Assets/LuaFramework/Scenes/MainScene.unity
+    guid: e2592c4f6c1254076aaff8021cbb0dbf

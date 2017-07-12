@@ -15,7 +15,7 @@ public class RefreshCommand : ControllerCommand {
 		AppFacade.Instance.GetManager<ResourceManager>(ManagerName.Resource);
 		AppFacade.Instance.GetManager<ThreadManager>(ManagerName.Thread);
 		AppFacade.Instance.GetManager<ObjectPoolManager>(ManagerName.ObjectPool);
-		AppFacade.Instance.GetManager<GameManager>(ManagerName.Game);
+		AppFacade.Instance.GetManager<GameManager>(ManagerName.Game).OnRefresh();
 		AppFacade.Instance.GetManager<SceneManager>(ManagerName.Scene);
 	}
 }

@@ -44,7 +44,8 @@ public class AppFacade : Facade {
     /// 刷新框架
     /// </summary>
     public void Refresh() {
-
+		SendMessageCommand(NotiConst.REFRESH);
+		RemoveMultiCommand(NotiConst.REFRESH);
     }
 }
 

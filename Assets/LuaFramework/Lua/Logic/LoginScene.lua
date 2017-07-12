@@ -12,6 +12,14 @@ local transform;
 local gameObject;
 local WWW = UnityEngine.WWW;
 
+local PanelNames = {
+    "PromptPanel",  
+}
+
+local CtrlNames = {
+    PromptCtrl = PromptCtrl.New,
+}
+
 function LoginScene.InitViewPanels()
 	for i = 1, #PanelNames do
 		require ("View/"..tostring(PanelNames[i]))
@@ -27,8 +35,8 @@ function LoginScene.OnInitOK()
     --注册LuaView--
     this.InitViewPanels();
 
-    CtrlManager.Init();
-    local ctrl = CtrlManager.GetCtrl(CtrlNames.Prompt);
+    CtrlManager.Init(CtrlNames);
+    local ctrl = CtrlManager.GetCtrl("PromptCtrl");
     if ctrl ~= nil and AppConst.ExampleMode == 1 then
         ctrl:Awake();
     end

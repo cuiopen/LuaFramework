@@ -233,7 +233,7 @@ namespace LuaFramework {
         void OnInitialize() {
             LuaManager.InitStart();
             string sceneName = SceneManager.GetCurSceneName();
-            LuaManager.DoFile("Logic/"+sceneName);          //加载场景
+            LuaManager.DoFile("Logic/" + sceneName);        //加载场景
             LuaManager.DoFile("Logic/Network");             //加载网络
             NetManager.OnInit();                            //初始化网络
             Util.CallMethod(sceneName, "OnInitOK");         //初始化完成
@@ -267,6 +267,13 @@ namespace LuaFramework {
 
             Debug.Log("TestGameObject--->>>" + backObj);
         }
+
+		public void OnRefresh() {
+			LuaManager.LuaGC();
+			string sceneName = SceneManager.GetCurSceneName();
+			LuaManager.DoFile("Logic/" + sceneName); 		//加载场景
+			Util.CallMethod(sceneName, "OnInitOK");         //初始化完成
+		}
 
         /// <summary>
         /// 当从池子里面获取时

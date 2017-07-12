@@ -6,10 +6,12 @@ CtrlManager = {};
 local this = CtrlManager;
 local ctrlList = {};	--控制器列表--
 
-function CtrlManager.Init()
+function CtrlManager.Init(data)
 	logWarn("CtrlManager.Init----->>>");
-	ctrlList[CtrlNames.Prompt] = PromptCtrl.New();
-	ctrlList[CtrlNames.Message] = MessageCtrl.New();
+	ctrlList = {}
+	for k,v in pairs(data) do
+		ctrlList[k] = v()
+	end
 	return this;
 end
 
