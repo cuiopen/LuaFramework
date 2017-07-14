@@ -32,6 +32,7 @@ function MainScene.OnInitOK()
     this.InitViewPanels();
     CtrlManager.Init(CtrlNames);
 
+    --初始化Ctrl 显示pannel
     local ctrl = CtrlManager.GetCtrl("MessageCtrl");
     if ctrl ~= nil and AppConst.ExampleMode == 1 then
         ctrl:Awake();

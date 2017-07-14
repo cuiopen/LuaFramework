@@ -45,7 +45,7 @@ public class AppFacade : Facade {
     /// </summary>
     public void Refresh() {
 		SendMessageCommand(NotiConst.REFRESH);
-		RemoveMultiCommand(NotiConst.REFRESH);
+		//RemoveMultiCommand(NotiConst.REFRESH);
     }
 }
 

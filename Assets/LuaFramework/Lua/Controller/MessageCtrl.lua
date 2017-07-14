@@ -29,6 +29,7 @@ end
 
 --单击事件--
 function MessageCtrl.OnClick(go)
+	sceneMgr:ChangeScene("LoginScene")
 	destroy(gameObject);
 end
 
