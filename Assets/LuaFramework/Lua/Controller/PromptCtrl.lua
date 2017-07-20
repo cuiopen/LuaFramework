@@ -64,6 +64,7 @@ end
 --单击事件--
 function PromptCtrl.OnClick(go)
     sceneMgr:ChangeScene("MainScene")
+    --destroy(gameObject);
 	logWarn("ChangeScene---->>>MainScene");
 end
 

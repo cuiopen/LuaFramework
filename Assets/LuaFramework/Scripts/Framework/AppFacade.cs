@@ -33,7 +33,7 @@ public class AppFacade : Facade {
     }
 
     /// <summary>
-    /// 启动框架
+    /// 启动框架 有且只启动一次
     /// </summary>
     public void StartUp() {
         SendMessageCommand(NotiConst.START_UP);
@@ -41,11 +41,10 @@ public class AppFacade : Facade {
     }
 
     /// <summary>
-    /// 刷新框架
+    /// 刷新框架 每次切场景 刷新
     /// </summary>
     public void Refresh() {
 		SendMessageCommand(NotiConst.REFRESH);
-		//RemoveMultiCommand(NotiConst.REFRESH);
     }
 }
 
