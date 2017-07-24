@@ -43,8 +43,3 @@ function LoginScene.OnInitOK()
        
     logWarn('LuaFramework InitOK--->>>');
 end
-
---销毁--
-function LoginScene.OnDestroy()
-	--logWarn('OnDestroy--->>>');
-end
