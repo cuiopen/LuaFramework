@@ -144,7 +144,7 @@ namespace LuaFramework {
                     list[i].luaFunc.Dispose();
                     list[i].luaFunc = null;
                 }
-                bundleInfo.m_ReferencedCount++;
+                //bundleInfo.m_ReferencedCount++;
             }
             m_LoadRequests.Remove(abName);
         }
